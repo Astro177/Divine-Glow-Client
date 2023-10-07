@@ -74,17 +74,20 @@ export const NavBar = () => {
   );
 
   return (
-    <div className="max-h-[768px] container mx-auto ">
-      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
+    <nav className="max-h-[768px] container mx-auto">
+      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-md bg-transparent py-2 px-4 lg:px-8 lg:py-4">
         <div className="flex items-center justify-between text-blue-gray-900">
-          <Typography
-            as="a"
-            href="#"
-            variant="h4"
-            className="mr-4 cursor-pointer py-1.5 font-medium"
-          >
-            Divine Glow
-          </Typography>
+          <div className="flex gap-2 items-center">
+            <img src="/DG-Logo.png" alt="" className="h-8 w-8 rounded-full" />
+            <Typography
+              as="a"
+              href="#"
+              variant="h4"
+              className="mr-4 cursor-pointer py-1.5 font-medium"
+            >
+              Divine Glow
+            </Typography>
+          </div>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <Button
@@ -142,14 +145,14 @@ export const NavBar = () => {
         </div>
         <MobileNav open={openNav}>
           {navList}
-          <Button variant="gradient" size="sm" fullWidth className="mb-2">
+          <Button variant="outlined" size="md" fullWidth className="mb-2">
             <span>Sign Up</span>
           </Button>
-          <Button variant="gradient" size="sm" fullWidth className="mb-2">
+          <Button variant="gradient" size="md" fullWidth className="mb-2">
             <span>Log In</span>
           </Button>
         </MobileNav>
       </Navbar>
-    </div>
+    </nav>
   );
 };
