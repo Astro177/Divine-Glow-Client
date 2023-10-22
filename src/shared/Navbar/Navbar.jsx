@@ -113,6 +113,9 @@ const Navbar = () => {
           </div>
         )}
       </div>
+      <div className="text-center fixed bottom-4 lg:bottom-16 text-2xl font-extrabold w-full z-50 ">
+        Divine Glow
+      </div>
     </nav>
   );
 };
