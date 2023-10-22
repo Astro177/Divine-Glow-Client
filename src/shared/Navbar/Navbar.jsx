@@ -1,158 +1,120 @@
-import React from "react";
-import {
-  Navbar,
-  MobileNav,
-  Typography,
-  Button,
-  IconButton,
-  Card,
-} from "@material-tailwind/react";
+import { Input } from "@material-tailwind/react";
+import React, { useState } from "react";
 
-export const NavBar = () => {
-  const [openNav, setOpenNav] = React.useState(false);
+const Navbar = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [SearchSidebarOpen, setSearchSidebarOpen] = useState(false);
 
-  React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false)
-    );
-  }, []);
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
 
-  const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Home
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          All Jewelry
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          My Jewelry
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Add Jewelry
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Blogs
-        </a>
-      </Typography>
-    </ul>
-  );
+  const closeSidebar = () => {
+    setSidebarOpen(false);
+  };
+
+  const toggleSearchSidebar = () => {
+    setSearchSidebarOpen(!SearchSidebarOpen);
+  };
+
+  const closeSearchSidebar = () => {
+    setSearchSidebarOpen(false);
+  };
 
   return (
-    <nav className="max-h-[768px] container mx-auto">
-      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-md bg-transparent py-2 px-4 lg:px-8 lg:py-4">
-        <div className="flex items-center justify-between text-blue-gray-900">
-          <div className="flex gap-2 items-center">
-            <img src="/DG-Logo.png" alt="" className="h-8 w-8 rounded-full" />
-            <Typography
-              as="a"
-              href="#"
-              variant="h4"
-              className="mr-4 cursor-pointer py-1.5 font-medium"
-            >
-              Divine Glow
-            </Typography>
-          </div>
-          <div className="flex items-center gap-4">
-            <div className="mr-4 hidden lg:block">{navList}</div>
-            <Button
-              variant="outlined"
-              size="md"
-              className="hidden lg:inline-block"
-            >
-              <span>Sign Up</span>
-            </Button>
-            <Button
-              variant="gradient"
-              size="md"
-              className="hidden lg:inline-block"
-            >
-              <span>Sign In</span>
-            </Button>
-            <IconButton
-              variant="text"
-              className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-              ripple={false}
-              onClick={() => setOpenNav(!openNav)}
-            >
-              {openNav ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  className="h-6 w-6"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              )}
-            </IconButton>
+    <nav className="">
+      <div className="text-black flex justify-between items-center py-16 px-16">
+        {/* Left Section */}
+        <div className="flex items-center">
+          <button
+            onClick={toggleSidebar}
+            className="md:hidden mr-2 p-2 text-2xl"
+          >
+            ☰
+          </button>
+          {/* Conditionally render Item 1, Item 2, and Item 3 in the left section for md screens */}
+          <div className="hidden md:flex gap-6 items-center text-sm capitalize">
+            <div className="hover:border-b-2  border-black">Women</div>
+            <div className="hover:border-b-2  border-black">Men</div>
+            <div className="hover:border-b-2  border-black">Explore</div>
+            <div className="hover:border-b-2  border-black">Beauty</div>
           </div>
         </div>
-        <MobileNav open={openNav}>
-          {navList}
-          <Button variant="outlined" size="md" fullWidth className="mb-2">
-            <span>Sign Up</span>
-          </Button>
-          <Button variant="gradient" size="md" fullWidth className="mb-2">
-            <span>Log In</span>
-          </Button>
-        </MobileNav>
-      </Navbar>
+
+        {/* Middle Section (Logo) */}
+        <div className="flex justify-center items-center">
+          <img src="/DG-Logo.png" className="w-[70px] h-[70px]" />
+        </div>
+
+        {/* Right Section */}
+        <div className="hidden md:flex text-sm">
+          <div
+            className="mr-4 hover:border-b-2  border-black"
+            onClick={toggleSearchSidebar}
+          >
+            Search
+          </div>
+          <div className="mr-4 hover:border-b-2  border-black">Login</div>
+        </div>
+        <div className="flex md:hidden text-sm">
+          <div
+            className="mr-4 hover:border-b-2  border-black"
+            onClick={toggleSearchSidebar}
+          >
+            Search
+          </div>
+          <div className="mr-4 hover:border-b-2  border-black">Cart</div>
+        </div>
+
+        {sidebarOpen && (
+          <div className="fixed top-0 left-0  bg-white w-full h-full text-black p-4 transition-transform transform translate-x-0 z-10">
+            {/* Close button for the sidebar */}
+            <div className="mt-10 px-6">
+              <button
+                onClick={closeSidebar}
+                className="absolute top-4 right-4 p-2 text-black text-3xl"
+              >
+                &#215;
+              </button>
+              {/* Sidebar content */}
+              <div className="flex flex-col gap-6 absolute top-[100px]">
+                <div className="hover:border-b-2 duration-100">Women</div>
+                <div className="hover:border-b-2 duration-100">Men</div>
+                <div className="hover:border-b-2 duration-100">Explore</div>
+                <div className="hover:border-b-2 duration-100 border-black">
+                  Beauty
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+        {SearchSidebarOpen && (
+          <div className="fixed top-0 right-0 w-1/2 h-full bg-white text-black p-4  transition-all transform translate-x-0 z-10">
+            {/* Close button for the sidebar */}
+            <div className="mt-10 px-6">
+              <button
+                onClick={closeSearchSidebar}
+                className="absolute top-4 right-4 p-2 text-black text-sm hover:border-b-2 duration-100 border-black"
+              >
+                Close
+              </button>
+              {/* Sidebar content */}
+              <div className="flex flex-col gap-6 absolute top-[100px] w-3/4 mx-auto px-12">
+                <Input variant="standard" label="Search" />
+                <div className="mt-2 flex flex-col gap-1">
+                  <p className="text-sm mb-4">Trending Searches</p>
+                  <p className="text-sm text-[#737373]">Antigona</p>
+                  <p className="text-sm text-[#737373]">Varsity Jacket</p>
+                  <p className="text-sm text-[#737373]">Shark Lock</p>
+                  <p className="text-sm text-[#737373]">G Tote</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
     </nav>
   );
 };
+
+export default Navbar;
