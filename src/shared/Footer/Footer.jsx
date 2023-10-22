@@ -1,17 +1,42 @@
-import { Typography } from "@material-tailwind/react";
+import { Input, Typography } from "@material-tailwind/react";
 
 const LINKS = [
   {
-    title: "Quick Links",
-    items: ["Home", "About Us", "Catalog", "Blog"],
+    title: "CONTACT US",
+    items: [
+      "Call +1 833 908 0147",
+      "Email contact.us@divineglow.com",
+      "Send a message",
+    ],
   },
   {
-    title: "Contact Us",
+    title: "CUSTOMER SERVICES",
     items: [
-      "424-947-9877",
-      "Luminary.@gmail.com",
-      "9256 Abigail Forges, Sao Tome and Principe",
+      "Contact",
+      "FAQ",
+      "Shipping & Payments",
+      "Return & Refund",
+      "Track Order",
+      "Store Finders",
+      "Sitemap",
     ],
+  },
+  {
+    title: "LEGAL",
+    items: [
+      "Privacy Policy",
+      "Cookie Policy",
+      "General terms and conditions of sale",
+      "General terms and conditions of sale for Haute Courture Creations",
+      "General terms and conditions of sale for the made to order Creations",
+      "Terms and Conditions",
+      "Anti Modern Slavery Statements",
+      "Anti-Counterfeit",
+    ],
+  },
+  {
+    title: "ABOUT",
+    items: ["Career", "Press"],
   },
 ];
 
@@ -19,21 +44,26 @@ const currentYear = new Date().getFullYear();
 
 export const Footer = () => {
   return (
-    <footer className="relative container mx-auto bg-[#957461] pt-[50px] rounded-md text-white">
-      <div className="mx-auto px-8">
-        <div className="md:flex justify-evenly gap-4">
-          <div className="">
-            <Typography variant="h3" className="mb-6">
-              Divine Glow
-            </Typography>
-            <Typography variant="small" className="mb-6 max-w-[150px]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-            </Typography>
-          </div>
-          <div className="grid grid-cols-2 justify-between gap-4 text-white">
+    <footer className="relative bg-black pt-[50px] text-white">
+      <div className="pt-[280px] text-center text-sm">
+        <p>
+          Be the first to know about new collections and everything Divine Glow.
+        </p>
+        <div className="w-[420px] mx-auto mt-12 relative">
+          <Input variant="standard" label="E-Mail" />
+          <p className="absolute right-0 bottom-1">Sign Up</p>
+        </div>
+        <div className="text-2xl text-center font-extrabold text-white mt-56">
+          DIVING GLOW
+        </div>
+      </div>
+      <hr className="mt-24 mb-24" />
+      <div className="px-8">
+        <div className="md:flex">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-between gap-5 text-white text-xs">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
-                <Typography variant="h5" className="mb-3 font-bold">
+                <Typography variant="small" className="mb-3 font-bold">
                   {title}
                 </Typography>
                 {items.map((link) => (
@@ -41,7 +71,8 @@ export const Footer = () => {
                     <Typography
                       as="a"
                       href="#"
-                      className="py-1.5 font-normal transition-colors hover:text-blue-gray-900 hover:underline duration-300 max-w-[250px]"
+                      variant="small"
+                      className="py-1.5 font-normal transition-colors hover:text-blue-gray-900 hover:underline duration-300 max-w-[300px]"
                     >
                       {link}
                     </Typography>
@@ -50,17 +81,25 @@ export const Footer = () => {
               </ul>
             ))}
           </div>
+          <div>
+            <p>NEWSETTER</p>
+            <div className="w-[500px] relative">
+              <Input variant="standard" label="E-Mail" />
+              <p className="absolute right-0 bottom-1">Sign Up</p>
+            </div>
+          </div>
         </div>
-        <div className="mt-12 flex flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
+        <hr className="mt-10" />
+        <div className="mt-10 flex flex-col items-center justify-center md:flex-row md:justify-between pb-12">
           <Typography
             variant="small"
-            className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
+            className="mb-4 mt-6 text-center font-normal md:mb-0"
           >
             &copy; {currentYear}{" "}
             <a href="https://material-tailwind.com/">Divine Glow</a>. All Rights
             Reserved.
           </Typography>
-          <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
+          <div className="flex gap-4 text-white sm:justify-center">
             <Typography
               as="a"
               href="#"

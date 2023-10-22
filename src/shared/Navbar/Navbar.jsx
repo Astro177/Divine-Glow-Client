@@ -23,9 +23,9 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 w-full z-50">
-      <div className="text-black flex justify-between items-center py-16 px-16">
+      <div className="text-black flex justify-between items-center py-16 md:px-16">
         {/* Left Section */}
-        <div className="flex items-center">
+        <div className="md:flex items-center">
           <button
             onClick={toggleSidebar}
             className="md:hidden mr-2 p-2 text-2xl"
