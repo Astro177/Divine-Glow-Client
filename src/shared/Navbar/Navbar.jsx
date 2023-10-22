@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="">
+    <nav className="fixed top-0 left-0 right-0 w-full z-50">
       <div className="text-black flex justify-between items-center py-16 px-16">
         {/* Left Section */}
         <div className="flex items-center">
@@ -89,7 +89,7 @@ const Navbar = () => {
           </div>
         )}
         {SearchSidebarOpen && (
-          <div className="fixed top-0 right-0 w-1/2 h-full bg-white text-black p-4  transition-all transform translate-x-0 z-10">
+          <div className="fixed top-0 right-0 w-2/6 h-full bg-white text-black p-4  transition-all transform translate-x-0 z-10">
             {/* Close button for the sidebar */}
             <div className="mt-10 px-6">
               <button

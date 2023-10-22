@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const Banner = () => {
   return (
-    <section className="max-w-[1200px] mx-auto mb-[300px]">
+    <section className="max-w-[1200px] mx-auto mb-[300px] py-[250px]">
       <div className="text-sm text-center text-black">
         <p>Shark Lock Boots</p>
         <p className="mt-2 hover:underline">Discover</p>
