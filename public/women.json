@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Mini Antigona Lock bag in satin with strass",
+    "price": 2150,
+    "image": "https://assets.givenchy.com/m/6f5e7dcb3ecbddad/High_Resolution_JPG-BB50U0B1WZ404-03-01.jpg?imwidth=1024"
+  },
+  {
+    "id": 2,
+    "name": "Dress with buttons and pleated effect in wool",
+    "price": 1850,
+    "image": "https://assets.givenchy.com/m/14c75a4393588fdc/High_Resolution_JPG-BW21T312HC020-03-01.jpg?imwidth=1024"
+  },
+  {
+    "id": 3,
+    "name": "Turtleneck sweater in cashmere",
+    "price": 2150,
+    "image": "https://assets.givenchy.com/m/2b614e2f189b1222/High_Resolution_JPG-BW90M34ZHQ067-03-01.jpg?imwidth=600s"
+  },
+  {
+    "id": 4,
+    "name": "Shark Lock boots in leather",
+    "price": 2395,
+    "image": "https://assets.givenchy.com/m/68c8cdff9d567707/High_Resolution_JPG-BE702EE1JC404-03-04.jpg?imwidth=600"
+  },
+  {
+    "id": 5,
+    "name": "Mini Kenny bag in satin with strass",
+    "price": 2690,
+    "image": "https://assets.givenchy.com/m/4445df0551dd159e/High_Resolution_JPG-BB50R8B1Z4366-03-01.jpg?imwidth=600"
+  },
+  {
+    "id": 6,
+    "name": "Coat in double face wool alpaca",
+    "price": 4400,
+    "image": "https://assets.givenchy.com/m/7fd2adf724ba0a44/High_Resolution_JPG-BWC0BU1507002-03-01.jpg?imwidth=600"
+  },
+  {
+    "id": 7,
+    "name": "Smocked dress in leather",
+    "price": 6500,
+    "image": "https://assets.givenchy.com/m/bd9c34fd5374031/High_Resolution_JPG-BW21R361GB001-03-01.jpg?imwidth=1024"
+  },
+  {
+    "id": 8,
+    "name": "Show slingbacks in leather",
+    "price": 895,
+    "image": "https://assets.givenchy.com/m/77a61f9798bc56e5/High_Resolution_JPG-BE4030E1YY714-03-04.jpg?imwidth=1024"
+  },
+  {
+    "id": 9,
+    "name": "Mini Antigona Lock bag in satin with strass",
+    "price": 2990,
+    "image": "https://assets.givenchy.com/m/63242b2622f11320/High_Resolution_JPG-BB50U0B1YV714-03-01.jpg?imwidth=600"
+  },
+  {
+    "id": 10,
+    "name": "Hoodie in cashmere",
+    "price": 1500,
+    "image": "https://assets.givenchy.com/m/3c24c9324cdf2b40/High_Resolution_JPG-BW90M54ZHQ201-03-01.jpg?imwidth=600"
+  },
+  {
+    "id": 11,
+    "name": "Leggings in 4G jacquard",
+    "price": 1150,
+    "image": "https://assets.givenchy.com/m/c20aa93a02a35b2/High_Resolution_JPG-BW50S44ZD6130-03-01.jpg?imwidth=600"
+  },
+  {
+    "id": 12,
+    "name": "Shark Lock boots in satin with strass",
+    "price": 6500,
+    "image": "https://assets.givenchy.com/m/1ea053c1a1d86d73/High_Resolution_JPG-BE702EE1XG714-03-04.jpg?imwidth=600"
+  },
+  {
+    "id": 13,
+    "name": "4G double sided beanie in wool and cashmere",
+    "price": 350,
+    "image": "https://assets.givenchy.com/m/68de41b92e20f098/High_Resolution_JPG-BGZ02ZG00V021-03-01.jpg?imwidth=600"
+  },
+  {
+    "id": 14,
+    "name": "G Scape sunglasses in metal",
+    "price": 480,
+    "image": "https://assets.givenchy.com/m/75161b5bc2f1b5c5/High_Resolution_JPG-BR008NR04N001-03-01.jpg?imwidth=600"
+  },
+  {
+    "id": 15,
+    "name": "4G cardigan in cashmere and silk",
+    "price": 1500,
+    "image": "https://assets.givenchy.com/m/3dde3223e259d0d/High_Resolution_JPG-BW90N04ZJM678-03-01.jpg?imwidth=600"
+  },
+  {
+    "id": 16,
+    "name": "Cargo pants in cotton jersey",
+    "price": 1300,
+    "image": "https://assets.givenchy.com/m/c859bc43bdaac9f/High_Resolution_JPG-BW51213YHA011-03-01.jpg?imwidth=600"
+  },
+  {
+    "id": 17,
+    "name": "Medium Voyou bag in washed denim",
+    "price": 2500,
+    "image": "https://assets.givenchy.com/m/33d6c3d5b3c68eff/High_Resolution_JPG-BB50SSB1QB427-03-01.jpg?imwidth=600"
+  },
+  {
+    "id": 18,
+    "name": "GIVENCHY 4G double sided scarf in wool and cashmere",
+    "price": 650,
+    "image": "https://assets.givenchy.com/m/6e049bd37e88cab7/High_Resolution_JPG-BG00D3G00V021-03-01.jpg?imwidth=600"
+  },
+  {
+    "id": 19,
+    "name": "4G sweater in curly cashmere and silk",
+    "price": 1300,
+    "image": "https://assets.givenchy.com/m/5ce08589376e98a9/High_Resolution_JPG-BW90MZ4ZJM678-03-01.jpg?imwidth=600"
+  },
+  {
+    "id": 20,
+    "name": "Oversized jeans in mixed denim",
+    "price": 1350,
+    "image": "https://assets.givenchy.com/m/16bf6a54fb5526c4/High_Resolution_JPG-BW50WG5Y6E001-03-01.jpg?imwidth=600"
+  }
+]
