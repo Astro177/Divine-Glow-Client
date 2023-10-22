@@ -42,7 +42,7 @@ const Navbar = () => {
         </div>
 
         {/* Middle Section (Logo) */}
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center mr-0 md:mr-[130px]">
           <img src="/DG-Logo.png" className="w-[70px] h-[70px]" />
         </div>
 
