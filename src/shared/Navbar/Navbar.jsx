@@ -137,8 +137,12 @@ const Navbar = () => {
             </button>
             {/* Sidebar content */}
             <div className="flex flex-col gap-6 absolute top-[100px]">
-              <div className="hover:border-b-2 duration-100">Women</div>
-              <div className="hover:border-b-2 duration-100">Men</div>
+              <Link to={"/women"}>
+                <div className="hover:border-b-2 duration-100">Women</div>
+              </Link>
+              <Link to={"/men"}>
+                <div className="hover:border-b-2 duration-100">Men</div>
+              </Link>
               <div className="hover:border-b-2 duration-100">Explore</div>
               <div className="flex items-center gap-1">
                 <div className="hover:border-b-2 duration-100">Beauty</div>
@@ -149,7 +153,7 @@ const Navbar = () => {
         </div>
       )}
       {SearchSidebarOpen && (
-        <div className="fixed top-0 right-0 w-2/6 h-full bg-white text-black p-4 transition-all transform translate-x-0 z-10">
+        <div className="fixed top-0 right-0 w-full md:w-2/6 h-full bg-white text-black p-4 transition-all transform translate-x-0 z-10">
           {/* Close button for the sidebar */}
           <div className="mt-10 px-6">
             <button

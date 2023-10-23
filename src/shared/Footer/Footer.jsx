@@ -49,7 +49,7 @@ export const Footer = () => {
         <p>
           Be the first to know about new collections and everything Divine Glow.
         </p>
-        <div className="w-[420px] mx-auto mt-12 relative">
+        <div className="w-[320px] md:w-[420px] mx-auto mt-12 relative">
           <Input variant="standard" label="E-Mail" />
           <p className="absolute right-0 bottom-1">Sign Up</p>
         </div>
@@ -83,7 +83,7 @@ export const Footer = () => {
           </div>
           <div>
             <p>NEWSETTER</p>
-            <div className="w-[500px] relative">
+            <div className="w-[320px] md:w-[500px] relative">
               <Input variant="standard" label="E-Mail" />
               <p className="absolute right-0 bottom-1">Sign Up</p>
             </div>
