@@ -1,9 +1,7 @@
 import { Checkbox, Input, Option, Select } from "@material-tailwind/react";
 import React from "react";
-import { useCountries } from "use-react-countries";
 
 const SignUp = () => {
-  const { countries } = useCountries();
   return (
     <section className="bg-white pb-[180px] pt-[300px] text-xs">
       <div className="max-w-[550px] mx-auto">
@@ -22,32 +20,8 @@ const SignUp = () => {
           </Select>
           <Input variant="standard" label="First Name*" />
           <Input variant="standard" label="Last Name*" />
-          <Select
-            size="lg"
-            label="Select Country"
-            selected={(element) =>
-              element &&
-              React.cloneElement(element, {
-                disabled: true,
-                className:
-                  "flex items-center opacity-100 px-0 gap-2 pointer-events-none mt-10",
-              })
-            }
-          >
-            {countries.map(({ name, flags }) => (
-              <Option
-                key={name}
-                value={name}
-                className="flex items-center gap-2"
-              >
-                <img
-                  src={flags.svg}
-                  alt={name}
-                  className="h-5 w-5 rounded-full object-cover"
-                />
-                {name}
-              </Option>
-            ))}
+          <Select size="lg" label="Select Country">
+            <Option>Bangladesh</Option>
           </Select>
           <Input variant="standard" label="E-Mail*" />
           <div className="flex gap-8">
