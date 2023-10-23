@@ -1,11 +1,14 @@
 import { Input } from "@material-tailwind/react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import HoverMenus from "./Components/HoverMenus";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [SearchSidebarOpen, setSearchSidebarOpen] = useState(false);
   const [womenModalOpen, setWomenModalOpen] = useState(false);
+  const [menModalOpen, setMenModalOpen] = useState(false);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -30,82 +33,13 @@ const Navbar = () => {
   const closeWomenModal = () => {
     setWomenModalOpen(false);
   };
+  const openMenModal = () => {
+    setMenModalOpen(true);
+  };
 
-  const Menus1 = [
-    "New In",
-    "Fall Winter 2023",
-    "Varsity",
-    "Special Occasion",
-    "Gifts for Her",
-    "Givenchy Iconics",
-    "Shark Lock",
-  ];
-
-  const menus2 = [
-    "All Ready-to-Wear",
-    "Outerwear & Blousons",
-    "Coats & Jackets",
-    "Dresses",
-    "Knitwear",
-    "Sweatshirts & Hoodies",
-    "T-Shirts",
-    "Tops & Shirts",
-    "Pants",
-    "Denim",
-    "Skirts",
-    "Shorts",
-    "Bodysuits & Underwear",
-    "Swimwear",
-  ];
-
-  const menus3 = [
-    "All Bags",
-    "Crossbody Bags",
-    "Shoulder Bags",
-    "Micro Bags",
-    "Wallets & Card Holders",
-    "Voyou",
-    "Antigona",
-    "G-Tote",
-    "4G",
-  ];
-
-  const menus4 = [
-    "All Shoes",
-    "Shark Lock",
-    "Boots & Booties",
-    "Heels",
-    "Sneakers",
-    "Slides & Sandals",
-    "City",
-    "Marshmallow",
-  ];
-
-  const menus5 = [
-    "All Accessories",
-    "Jewelry",
-    "Sunglasses",
-    "Beanies & Caps",
-    "Scarves",
-    "Wallets & Card Holders",
-    "Belts",
-    "Straps & Other Accessories",
-  ];
-
-  const menu6 = [
-    "All Kids",
-    "Baby (1 month to 3 years)",
-    "Girl (4 to 12 years)",
-  ];
-
-  const topMenus = [
-    "NEW ARRIVAL",
-    "READY-TO-WEAR",
-    "BAGS",
-    "SHOES",
-    "ACCESSORIES",
-    "KIDS",
-  ];
+  const closeMenModal = () => {
+    setMenModalOpen(false);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 w-full z-50">
@@ -127,27 +61,37 @@ const Navbar = () => {
               >
                 Women
                 {womenModalOpen && (
-                  <div className="absolute border text-black px-4 py-12 mt-1 w-full h-full text-sm">
+                  <div className="absolute top-1/2 text-black px-6  py-12 mt-1 w-full h-[500px] text-xs bg-white/70 left-0">
                     {/* Modal content */}
                     <div className="grid grid-cols-6 justify-between">
-                      {topMenus.map((topMenu, i) => (
-                        <div key={i} className="">
-                          {topMenu}
-                        </div>
-                      ))}
-                      {Menus1.map((menu, i) => (
-                        <div key={i}>{menu}</div>
-                      ))}
+                      <HoverMenus />
                     </div>
                   </div>
                 )}
               </div>
             </Link>
             <Link to={"/men"}>
-              <div className="hover:border-b-2  border-black">Men</div>
+              <div
+                className="hover:border-b-2  border-black"
+                onMouseEnter={openMenModal}
+                onMouseLeave={closeMenModal}
+              >
+                Men
+                {menModalOpen && (
+                  <div className="absolute top-1/2 text-black px-6 py-12 mt-1 w-full h-[500px] text-xs bg-white/70 left-0">
+                    {/* Modal content */}
+                    <div className="grid grid-cols-6 justify-between">
+                      <HoverMenus />
+                    </div>
+                  </div>
+                )}
+              </div>
             </Link>
             <div className="hover:border-b-2  border-black">Explore</div>
-            <div className="hover:border-b-2  border-black">Beauty</div>
+            <div className="flex items-center gap-1">
+              <div className="hover:border-b-2 duration-100">Beauty</div>
+              <FiArrowUpRight />
+            </div>
           </div>
         </div>
 
@@ -167,6 +111,7 @@ const Navbar = () => {
             Search
           </div>
           <div className="mr-4 hover:border-b-2  border-black">Login</div>
+          <div className="mr-4 hover:border-b-2  border-black">bag</div>
         </div>
         <div className="flex md:hidden text-sm">
           <div
@@ -193,8 +138,9 @@ const Navbar = () => {
               <div className="hover:border-b-2 duration-100">Women</div>
               <div className="hover:border-b-2 duration-100">Men</div>
               <div className="hover:border-b-2 duration-100">Explore</div>
-              <div className="hover:border-b-2 duration-100 border-black">
-                Beauty
+              <div className="flex items-center gap-1">
+                <div className="hover:border-b-2 duration-100">Beauty</div>
+                <FiArrowUpRight />
               </div>
             </div>
           </div>
