@@ -1,9 +1,10 @@
 import { Checkbox, Input } from "@material-tailwind/react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <section className="bg-white pb-[580px] pt-[300px] text-xs ">
+    <section className="bg-white pb-[180px] pt-[300px] text-xs">
       <div className="max-w-[550px] mx-auto">
         {" "}
         <p className="mb-4">SIGN IN</p>
@@ -37,7 +38,7 @@ const Login = () => {
             Create your personal account to join our DivineGlow family.
           </p>
           <button className="text-black duration-200 py-3 mt-10 outline-1 outline">
-            CREATE AN ACCOUNT
+            <Link to={"/signUp"}>CREATE AN ACCOUNT</Link>
           </button>
         </div>
         <div className="mt-36">
