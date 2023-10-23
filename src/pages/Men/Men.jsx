@@ -1,7 +1,7 @@
 import { Input } from "@material-tailwind/react";
 import React, { useEffect, useState } from "react";
 
-const Women = () => {
+const Men = () => {
   const [data, setData] = useState([]);
   const [SearchSidebarOpen, setSearchSidebarOpen] = useState(false);
 
@@ -14,14 +14,14 @@ const Women = () => {
   };
 
   useEffect(() => {
-    fetch("/women.json")
+    fetch("/men.json")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
   return (
     <section className="pt-[250px] bg-white pb-[300px]">
       <div className="flex justify-between items-center px-12 text-sm">
-        <p>Women section</p>
+        <p>Men section</p>
         <p
           className="hover:underline cursor-pointer"
           onClick={toggleSearchSidebar}
@@ -87,4 +87,4 @@ const Women = () => {
   );
 };
 
-export default Women;
+export default Men;

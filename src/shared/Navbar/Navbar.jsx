@@ -31,6 +31,82 @@ const Navbar = () => {
     setWomenModalOpen(false);
   };
 
+  const Menus1 = [
+    "New In",
+    "Fall Winter 2023",
+    "Varsity",
+    "Special Occasion",
+    "Gifts for Her",
+    "Givenchy Iconics",
+    "Shark Lock",
+  ];
+
+  const menus2 = [
+    "All Ready-to-Wear",
+    "Outerwear & Blousons",
+    "Coats & Jackets",
+    "Dresses",
+    "Knitwear",
+    "Sweatshirts & Hoodies",
+    "T-Shirts",
+    "Tops & Shirts",
+    "Pants",
+    "Denim",
+    "Skirts",
+    "Shorts",
+    "Bodysuits & Underwear",
+    "Swimwear",
+  ];
+
+  const menus3 = [
+    "All Bags",
+    "Crossbody Bags",
+    "Shoulder Bags",
+    "Micro Bags",
+    "Wallets & Card Holders",
+    "Voyou",
+    "Antigona",
+    "G-Tote",
+    "4G",
+  ];
+
+  const menus4 = [
+    "All Shoes",
+    "Shark Lock",
+    "Boots & Booties",
+    "Heels",
+    "Sneakers",
+    "Slides & Sandals",
+    "City",
+    "Marshmallow",
+  ];
+
+  const menus5 = [
+    "All Accessories",
+    "Jewelry",
+    "Sunglasses",
+    "Beanies & Caps",
+    "Scarves",
+    "Wallets & Card Holders",
+    "Belts",
+    "Straps & Other Accessories",
+  ];
+
+  const menu6 = [
+    "All Kids",
+    "Baby (1 month to 3 years)",
+    "Girl (4 to 12 years)",
+  ];
+
+  const topMenus = [
+    "NEW ARRIVAL",
+    "READY-TO-WEAR",
+    "BAGS",
+    "SHOES",
+    "ACCESSORIES",
+    "KIDS",
+  ];
+
   return (
     <nav className="fixed top-0 left-0 right-0 w-full z-50">
       <div className="text-black flex justify-between items-center py-16 md:px-16">
@@ -51,22 +127,25 @@ const Navbar = () => {
               >
                 Women
                 {womenModalOpen && (
-                  <div className="absolute border text-black p-4 mt-1 w-full h-full">
+                  <div className="absolute border text-black px-4 py-12 mt-1 w-full h-full text-sm">
                     {/* Modal content */}
-                    <div className="hover:border-b-2 duration-100">
-                      Category 1
-                    </div>
-                    <div className="hover:border-b-2 duration-100">
-                      Category 2
-                    </div>
-                    <div className="hover:border-b-2 duration-100">
-                      Category 3
+                    <div className="grid grid-cols-6 justify-between">
+                      {topMenus.map((topMenu, i) => (
+                        <div key={i} className="">
+                          {topMenu}
+                        </div>
+                      ))}
+                      {Menus1.map((menu, i) => (
+                        <div key={i}>{menu}</div>
+                      ))}
                     </div>
                   </div>
                 )}
               </div>
             </Link>
-            <div className="hover:border-b-2  border-black">Men</div>
+            <Link to={"/men"}>
+              <div className="hover:border-b-2  border-black">Men</div>
+            </Link>
             <div className="hover:border-b-2  border-black">Explore</div>
             <div className="hover:border-b-2  border-black">Beauty</div>
           </div>
