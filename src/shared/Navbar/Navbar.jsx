@@ -110,7 +110,9 @@ const Navbar = () => {
           >
             Search
           </div>
-          <div className="mr-4 hover:border-b-2  border-black">Login</div>
+          <Link to={"/login"}>
+            <div className="mr-4 hover:border-b-2  border-black">Sign In</div>
+          </Link>
           <div className="mr-4 hover:border-b-2  border-black">bag</div>
         </div>
         <div className="flex md:hidden text-sm">
