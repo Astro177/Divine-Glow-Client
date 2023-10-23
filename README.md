@@ -1,1 +1,1 @@
-*Live Site- https://divine-glow.vercel.app/
+* Live Site- https://divine-glow.vercel.app/
